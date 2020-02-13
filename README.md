@@ -1,4 +1,8 @@
 # Trilogic.Common.Variables
-A very simple stack for storing and retrieving string runtime variables
+A library for storing and retrieving runtime variables.
 
-This library dates back back to the olde days and the source was pulled out of a SourceSafe repository.
+Variables are managed using a Stack<Dictionary<string key,T value>> type structure.  The lowest level of the stack is assumed to be the global scope whereas the top of stack is assumed to be the local scope.  Get/Set/Exist operations can be limited to the local or global scopes or allowed to traverse the entire stack.
+
+Values within the stack can be initialized with get/set/delete delegates to mimic readonly values, auto incrementing values or to implement any type of variable behavior desired.
+
+The original library dates back back quite a few years with the original source being written in VB5.
